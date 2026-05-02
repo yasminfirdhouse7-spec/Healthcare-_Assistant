@@ -1,13 +1,3 @@
 ## Summary 
-# Healthcare assistant 
-
-This project is a simple healthcare assistant built using C++.
-
-## Version 1:
-- Basic symptom checker using if-else logic.this gives basic advice based on the symptoms the user provides as the input.
-
-## Version 2:
-- Advanced system with risk analysis, advice, and file handling.this version provides risk level analysis, symptom count,basic advice based on the input ,and also saves files with the patients details.
-
-This project demonstrates logical thinking and problem-solving using programming.# Healthcare-_Assistant
-Code
+# Healthcare assistant
+This project is a Healthcare Assistant system developed in two progressive versions to demonstrate the evolution from basic rule-based logic to a more structured decision-support tool. The first version is a simple rule-based system that takes user-input symptoms and provides basic health advice based on predefined if-else conditions. It focuses on identifying common symptom patterns and offering general suggestions, helping users get quick preliminary guidance when professional medical help is not immediately available. This version highlights the foundational understanding of logic building and conditional programming. The second version of the project is an improved and more advanced implementation, where additional functionalities such as symptom counting, risk level estimation, and structured advice generation have been introduced. It also includes the ability to store patient details in a file, making it more organized and closer to a real-world application system. This upgraded version reflects an effort to enhance usability, data handling, and decision-making structure within the application. Together, both versions of the project demonstrate a clear learning progression from basic programming logic to a more refined system design approach, combining healthcare awareness with computational thinking. The overall aim of this project is to assist users in understanding their symptoms at a basic level and to encourage early awareness before seeking professional medical consultation, while also showcasing the developer’s interest in applying technology to real-world healthcare problems.
