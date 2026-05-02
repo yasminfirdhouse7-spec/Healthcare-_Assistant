@@ -1,4 +1,5 @@
-# Healthcare Assistant (C++)
+## SUMMARY 
+# Healthcare assistant 
 
 This project is a simple healthcare assistant built using C++.
 
