@@ -1,0 +1,207 @@
+#include<iostream>
+#include<string>
+#include<ctime>
+
+using namespace std;
+
+// FUNCTION TO SHOW DATE & TIME
+void showDateTime()
+{
+    time_t now = time(0);
+
+    char* dt = ctime(&now);
+
+    cout << "\nCurrent Date and Time: " << dt << endl;
+}
+
+int main()
+{
+    int choice;
+
+    while(true)
+    {
+        cout << "\n=====================================\n";
+        cout << "     SMART HEALTHCARE ASSISTANT\n";
+        cout << "=====================================\n";
+
+        showDateTime();
+
+        cout << "\n1. Health Diagnosis\n";
+        cout << "2. Save Patient Data\n";
+        cout << "3. Health Chatbot\n";
+        cout << "4. Water Reminder\n";
+        cout << "5. Medicine Reminder\n";
+        cout << "6. Sleep Checker\n";
+        cout << "7. Exit\n";
+
+        cout << "\nEnter your choice: ";
+        cin >> choice;
+
+        // HEALTH DIAGNOSIS
+        if(choice == 1)
+        {
+            int fever, cough, tiredness;
+
+            cout << "\n===== HEALTH DIAGNOSIS =====\n";
+
+            cout << "Do you have fever? (1-Yes / 0-No): ";
+            cin >> fever;
+
+            cout << "Do you have cough? (1-Yes / 0-No): ";
+            cin >> cough;
+
+            cout << "Do you feel tiredness? (1-Yes / 0-No): ";
+            cin >> tiredness;
+
+            cout << "\n===== RESULT =====\n";
+
+            if(fever && cough && tiredness)
+            {
+                cout << "Possible viral infection.\n";
+                cout << "Please consult a doctor.\n";
+            }
+            else if(fever && cough)
+            {
+                cout << "You may have common fever/cold.\n";
+            }
+            else if(cough)
+            {
+                cout << "Drink warm water and take rest.\n";
+            }
+            else
+            {
+                cout << "You seem mostly fine.\n";
+            }
+        }
+
+        // SAVE PATIENT DATA
+        else if(choice == 2)
+        {
+            string name;
+            int age;
+
+            cin.ignore();
+
+            cout << "\n===== SAVE PATIENT DATA =====\n";
+
+            cout << "Enter patient name: ";
+            getline(cin, name);
+
+            cout << "Enter age: ";
+            cin >> age;
+
+            cout << "\nPatient data saved successfully.\n";
+
+            cout << "Name : " << name << endl;
+            cout << "Age  : " << age << endl;
+        }
+
+        // HEALTH CHATBOT
+        else if(choice == 3)
+        {
+            string symptom;
+
+            cin.ignore();
+
+            cout << "\n===== HEALTH CHATBOT =====\n";
+
+            cout << "Tell your symptom: ";
+            getline(cin, symptom);
+
+            if(symptom == "headache")
+            {
+                cout << "\nBot: Drink water and take proper rest.\n";
+                cout << "Avoid too much screen time.\n";
+            }
+            else if(symptom == "fever")
+            {
+                cout << "\nBot: Stay hydrated and monitor your temperature.\n";
+            }
+            else if(symptom == "cough")
+            {
+                cout << "\nBot: Drink warm fluids and rest well.\n";
+            }
+            else if(symptom == "cold")
+            {
+                cout << "\nBot: Take steam and drink warm water.\n";
+            }
+            else if(symptom == "stomach pain")
+            {
+                cout << "\nBot: Eat light food and drink enough water.\n";
+            }
+            else
+            {
+                cout << "\nBot: Please consult a doctor if symptoms continue.\n";
+            }
+        }
+
+        // WATER REMINDER
+        else if(choice == 4)
+        {
+            cout << "\n===== WATER REMINDER =====\n";
+
+            cout << "💧 Drink water regularly!\n";
+            cout << "Aim for at least 8 glasses daily.\n";
+            cout << "Stay hydrated for better health.\n";
+        }
+
+        // MEDICINE REMINDER
+        else if(choice == 5)
+        {
+            string medicine, date, timing;
+
+            cin.ignore();
+
+            cout << "\n===== MEDICINE REMINDER =====\n";
+
+            cout << "Enter medicine name: ";
+            getline(cin, medicine);
+
+            cout << "Enter date: ";
+            getline(cin, date);
+
+            cout << "Enter timing: ";
+            getline(cin, timing);
+
+            cout << "\n⏰ Reminder Saved Successfully!\n";
+
+            cout << "Medicine : " << medicine << endl;
+            cout << "Date     : " << date << endl;
+            cout << "Timing   : " << timing << endl;
+        }
+
+        // SLEEP CHECKER
+        else if(choice == 6)
+        {
+            int sleep;
+
+            cout << "\n===== SLEEP CHECKER =====\n";
+
+            cout << "How many hours did you sleep? ";
+            cin >> sleep;
+
+            if(sleep < 7)
+            {
+                cout << "\n⚠ You need more sleep for better health!\n";
+            }
+            else
+            {
+                cout << "\n✅ Good sleep schedule!\n";
+            }
+        }
+
+        // EXIT
+        else if(choice == 7)
+        {
+            cout << "\nThank you for using Smart Healthcare Assistant!\n";
+            break;
+        }
+
+        else
+        {
+            cout << "\nInvalid choice. Please try again.\n";
+        }
+    }
+
+    return 0;
+}
